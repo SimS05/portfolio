@@ -1,0 +1,54 @@
+.burger-ico{
+    background: url("../images/icons/burgermenu128p.png");
+}
+
+.user-ico{
+    background: url("../images/icons/user.png");
+}
+
+.wallet-ico{
+    background: url("../images/icons/wallet.png");
+}
+
+.gallery-ico{
+    background: url("../images/icons/gallery.png");
+}
+
+.phone-ico{
+    background: url("../images/icons/phone.png");
+}
+
+.cv-ico{
+    background: url("../images/icons/CV.png");
+}
+
+.check-ico{
+    background: url("../images/icons/check.png");
+}
+
+.email-ico{
+    background: url("../images/icons/email.png");
+}
+
+.linkedin-ico{
+    background: url("../images/icons/linkedin.png");
+}
+
+.insta-ico{
+    background: url("../images/icons/insta.png");
+}
+
+
+.ico{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: cover;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.ico-l{
+    width: 24px;
+    height: 24px;
+}
