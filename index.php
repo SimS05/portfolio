@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-            Gallery
+            Sign Up
         </title>
         <link rel="stylesheet" href="css/mStyle.css">
         <link rel="stylesheet" href="css/icons.css">
@@ -13,21 +13,63 @@
             
         <div style="text-align:center">
             <div class="signup">
+                <div class="signuplogin">
+                <div class="box" style="border: 1px solid white;text-align:center">
+                    <h1><a href="index.php" style="color:#696767">Sign Up</a></h1>
+                </div>
+                <div class="box" style="border: 1px solid white;text-align:center">
+                    <h1><a href="pages/login.php">Login</a></h1>
+                </div>
+                </div>
                     <form action="#">
 
-                        <label for="fname">Full Name<span>*</span></label>
+                    <div class="inputrow">
+
+                        <div class="box">
+                        <label for="fname">Username<span>*</span></label>
                         <input type="text" name="fname" required=""/>
-
-                        <label for="email">Email<span>*</span></label>
+                        </div>
+              
+                        <div class="box">
+                        <label for="email">Full Name<span>*</span></label>
                         <input type="text" name="email" required=""/>
+                        </div>
+                        </div>
                         
-                        <label for="phonenum">Phone Number<span>*</span></label>
+                        <div class="inputrow">
+                        
+                        <div class="box">
+                        <label for="phonenum">Password<span>*</span></label>
                         <input type="tel" name="phonenum" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required=""/>
+                        </div>
 
-                        <label for="msg">Message<span>*</span></label>
-                        <textarea name="msg"style="resize:none;height:100px" required=""></textarea>
+                        <div class="box">
+                        <label for="msg">Confirm Password<span>*</span></label>
+                        <input type="text" name="fname" required=""/>
+                        </div>
+                        </div>
 
-                        <button type="submit">Send</button>
+                        <div class="inputrow">
+                        
+                        <div class="box">
+                        <label for="phonenum">Date of Birth<span>*</span></label>
+                        <input type="date" name="phonenum" required=""/>
+                        </div>
+
+                        <div class="box">
+                        <label for="msg">Sex<span>*</span></label>
+                        <select name="sex" id="cars" style="height: 35;text-align:center">
+                        <option value="volvo" selected disabled>--------------Choose Sex--------------</option>
+                        <option value="volvo">Female</option>
+                        <option value="volvo">Male</option>
+                        </select>
+
+                        </div>
+                        </div>
+
+                        <div class="inputrow" style="justify-content:center">
+                        <button type="submit">Sign Up</button>
+                        </div>
 
                     </form>
             </div>

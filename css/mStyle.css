@@ -400,46 +400,75 @@ text-align: center;
 
 .signup{
     background: #fcfafa;
-    padding: 30px 100px 50px; 
-    border-top: 8px solid #100702;
+    padding: 20px 15px 50px;
     border-bottom: 8px solid #100702;
     height: 350px;
     display:inline-block;
     margin-top:90px;
     width:40%;
+    text-align: left;
 }
 
 .signup form {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    margin-top:15px;
 }
 
 .signup span {
     color:red;
 }
   
-.signup label, input, textarea {
+.signup label, input, textarea,select {
     display: block;
     width: 100%;
     line-height: 24pt;
     
 }
 
-.signup input, textarea {
+.signup input, textarea ,option,select{
     border-radius: 8px;
     border: 1px solid #100702;
 }
 .signup button {
-    display: block;
     line-height: 24pt;
-    padding: 0 30px;
+    height: 25%;
     border-radius: 7px;
     background: #100702;
     color: white;
-    margin-top: 10px;
+    margin-top: 20px;
+    display: inline-block;
   }
 
 .signup button:hover {
     background: #4c4c4c;
   }
+
+.inputrow{
+    display:flex;
+}
+
+.box{
+    padding: 5px;
+    width: 50%;
+    text-align: left;
+}
+
+.box h1,a{
+    display: inline;
+    color:white;
+    text-decoration-line: none;
+}
+
+.box a:hover {
+    color: rgb(221, 220, 220);
+}
+
+.signuplogin{
+    background: #100702;
+    height: 15%;
+    width: 105.9%;
+    margin-top: -20;
+    margin-left: -15;
+    display:flex;
+}
