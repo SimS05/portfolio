@@ -1,3 +1,4 @@
+<?php require_once('header.php')?>
 <head>
     <title>
         Portfolio
@@ -7,27 +8,6 @@
     <script src="https://kit.fontawesome.com/bb527c3eda.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="row" id="header">
-        <div id="dropdown-menu">
-            <span><i class="ico burger-ico"></i>MENU</span>
-            <div class="dropdown-content">
-                <ul>
-                    <a href="home.html">
-                        <li><i class="ico ico-l user-ico"></i>Home</li>
-                    </a>
-                    <a href="gallery.html">
-                        <li><i class="ico ico-l gallery-ico"></i>Gallery</li>
-                    </a>
-                    <a href="cv.html">
-                        <li><i class="ico ico-l cv-ico"></i>CV</li>
-                    </a>
-                    <a href="contactme.html">
-                        <li><i class="ico ico-l phone-ico"></i>Contact Me</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-    </div>
 
     <div class="banner" style="height: 15vh;text-align: center;">
         <h1 style="padding-top: 2.6%;">CV</h1>

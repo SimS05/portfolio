@@ -18,63 +18,94 @@
                     <h1><a href="index.php" style="color:#696767">Sign Up</a></h1>
                 </div>
                 <div class="box" style="border: 1px solid white;text-align:center">
-                    <h1><a href="pages/login.php">Login</a></h1>
+                    <h1><a href="pages/login.html">Login</a></h1>
                 </div>
                 </div>
-                    <form action="#">
+                    <form action="BE/signup.php" method="POST" id="signup-form">
 
                     <div class="inputrow">
 
                         <div class="box">
-                        <label for="fname">Username<span>*</span></label>
-                        <input type="text" name="fname" required=""/>
+                        <label for="uname">Username<span>*</span></label>
+                        <input type="text" name="uname" id="uname"/>
                         </div>
               
                         <div class="box">
-                        <label for="email">Full Name<span>*</span></label>
-                        <input type="text" name="email" required=""/>
+                        <label for="fname">Full Name<span>*</span></label>
+                        <input type="text" name="fname" id="fname"/>
                         </div>
                         </div>
                         
                         <div class="inputrow">
                         
                         <div class="box">
-                        <label for="phonenum">Password<span>*</span></label>
-                        <input type="tel" name="phonenum" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required=""/>
+                        <label for="pass">Password<span>*</span></label>
+                        <input type="password" name="pass" id="pass"/>
                         </div>
 
                         <div class="box">
-                        <label for="msg">Confirm Password<span>*</span></label>
-                        <input type="text" name="fname" required=""/>
+                        <label for="cpass">Confirm Password<span>*</span></label>
+                        <input type="password" name="cpass" id="cpass"/>
                         </div>
                         </div>
 
                         <div class="inputrow">
                         
                         <div class="box">
-                        <label for="phonenum">Date of Birth<span>*</span></label>
-                        <input type="date" name="phonenum" required=""/>
+                        <label for="dob">Date of Birth<span>*</span></label>
+                        <input type="date" name="dob" id="dob"/>
                         </div>
 
                         <div class="box">
-                        <label for="msg">Sex<span>*</span></label>
-                        <select name="sex" id="cars" style="height: 35;text-align:center">
-                        <option value="volvo" selected disabled>--------------Choose Sex--------------</option>
-                        <option value="volvo">Female</option>
-                        <option value="volvo">Male</option>
+                        <label for="sex">Sex<span>*</span></label>
+                        <select name="sex" id="sex" style="height: 35;text-align:center">
+                        <option value="" selected disabled>--------------Choose Sex--------------</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
                         </select>
 
                         </div>
                         </div>
 
                         <div class="inputrow" style="justify-content:center">
-                        <button type="submit">Sign Up</button>
-                        </div>
+                        <button type="button" onclick="signup()">Sign Up</button>
+                        </div> 
 
                     </form>
             </div>
         </div>
-
+    <script>
+        function signup(){
+            var flag=false;
+            var uname=document.getElementById("uname").value;
+            var fname=document.getElementById("fname").value;
+            var pass=document.getElementById("pass").value;
+            var cpass=document.getElementById("cpass").value;
+            var dob = new Date(document.getElementById("dob").value);
+            var sex=document.getElementById("sex").value;
+            
+           
+    
+            if((uname=="") || (fname=="") || (pass=="") || (cpass=="") || (dob=="") || (sex=="") || (sex==null)){
+                flag=true;
+                alert("Fill out all the fields"); 
+            }
+            else{
+                if(pass!==cpass){
+                    flag=true;
+                    alert("Passwords Do Not Match");
+                }
+                var today=new Date();
+                if(dob>today){
+                    flag=true;
+                    alert("Date Is Invalid");
+                }
+            }
+            if(!flag){
+                    document.getElementById("signup-form").submit();
+                }
+        }
+    </script>
     </body>
 
    

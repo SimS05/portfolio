@@ -1,34 +1,13 @@
+<?php require_once('header.php')?>
 <html>
     <head>
         <title>
             Home
         </title>
-        <link rel="stylesheet" href="../css/mStyle.css">
-        <link rel="stylesheet" href="../css/icons.css">
+     
     </head>
     <body>
-        <div class="row" id="header">
-            <div id="dropdown-menu">
-                <span><i class="ico burger-ico"></i>MENU</span>
-                <div class="dropdown-content">
-                    <ul>
-                        <a href="home.html">
-                            <li><i class="ico ico-l user-ico"></i>Home</li>
-                        </a>
-                        <a href="gallery.html">
-                            <li><i class="ico ico-l gallery-ico"></i>Gallery</li>
-                        </a>
-                        <a href="cv.html">
-                            <li><i class="ico ico-l cv-ico"></i>CV</li>
-                        </a>
-                        <a href="contactme.html">
-                            <li><i class="ico ico-l phone-ico"></i>Contact Me</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+        
         <div class="banner">
             <img src="../images/imagee.png">
             <h1>Sima's Portfolio</h1>

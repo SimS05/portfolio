@@ -38,6 +38,10 @@
     background: url("../images/icons/insta.png");
 }
 
+.logout-ico{
+    background: url("../images/icons/logout.png");
+}
+
 
 .ico{
     width: 16px;

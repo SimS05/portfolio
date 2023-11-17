@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Login
+        </title>
+        <link rel="stylesheet" href="../css/mStyle.css">
+        <link rel="stylesheet" href="../css/icons.css">
+    </head>
+    <body>
+        <div id="header" style="display:inline-block;padding-bottom:0px;text-align:center;width:100%;height:60px">
+            <h1 style="color:white;margin:0px;padding:10px">Sima's Portfolio<h1>
+        </div>
+            
+        <div style="text-align:center">
+            <div class="signup" style="text-align:center">
+                <div class="signuplogin">
+                <div class="box" style="border: 1px solid white;text-align:center">
+                    <h1><a href="../index.php">Sign Up</a></h1>
+                </div>
+                <div class="box" style="border: 1px solid white;text-align:center">
+                    <h1><a href="login.html" style="color:#696767">Login</a></h1>
+                </div>
+                </div>
+                    <form action="../BE/login.php" id="login-form" method="POST" style="justify-content: center;align-items: center;">
+
+                        <label for="uname" style="padding:12px">Username</label>
+                        <input type="text" name="uname" id="uname" style="width:50%">
+                        
+                        
+                        <label for="pass" style="padding:12px">Password</label>
+                        <input type="password" name="pass" id="pass" style="width:50%">
+                       
+                        
+                        <div class="inputrow" style="justify-content:center">
+                        <button type="button" class="signup button" onclick="login()" style="width: 100%; padding: 4px 15px; border-bottom:2px;margin-top:25px">Login</button>
+                        </div>
+
+                    </form>
+            </div>
+        </div>
+
+        <script>
+            function login(){
+                var uname=document.getElementById("uname").value;
+                var pass=document.getElementById("pass").value;
+                if(uname=="" || pass==""){
+                    alert("Fill out all the fields");
+                }
+                else{
+                    document.getElementById("login-form").submit();
+                }
+            }
+            </script>
+
+    </body>
+
+   
