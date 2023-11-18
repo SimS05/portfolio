@@ -13,7 +13,7 @@ $user->sex = isset($_POST["sex"]) ? $_POST["sex"] : "";
 
 $jsonData=file_get_contents("db.json");
 $users=json_decode($jsonData,true);
-$users[]=$user;
+$users["users"][]=$user;
 $updatejData=json_encode($users);
 $result=file_put_contents("db.json", $updatejData);
 if($result!==false){

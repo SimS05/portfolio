@@ -13,56 +13,21 @@
         <div class="content">
         </div>
             <div class="gallery">
+        <?php
+        $jsonData=file_get_contents("../BE/db.json");
+        $images=json_decode($jsonData,true);
+        $images=$images['images'];
+        foreach($images as $image){
+            ?>
                 <div class="image">
-                    <a href="#img1">
-                    <img src="../images/kitten(1).png">
+                    <a href="#<?php echo $image['id'];?>">
+                    <img src="../images/<?php echo $image['path'];?>.png">
                     </a>
                 </div>
-                <div class="image">
-                    <a href="#img2">
-                        <img src="../images/kitten(2).png">
-                        </a>
-                </div>
-                <div class="image">
-                    <a href="#img3">
-                        <img src="../images/kitten(3).png">
-                        </a>
-                </div>
-                <div class="image">
-                    <a href="#img4">
-                        <img src="../images/kitten(4).png">
-                        </a>
-                </div>
-                <div class="image">
-                    <a href="#img5">
-                        <img src="../images/kitten(5).jpg">
-                        </a>
-                </div>
-                <div class="image">
-                    <a href="#img6">
-                        <img src="../images/kitten(6).png">
-                        </a>
-                </div>
-                
-                <a href="#" id="img1" class="lightbox">
-                    <img src="../images/kitten(1).png">
+                <a href="#" id="<?php echo $image['id'];?>" class="lightbox">
+                    <img src="../images/<?php echo $image['path'];?>.png">
                 </a>
-                <a href="#" id="img2" class="lightbox">
-                    <img src="../images/kitten(2).png">
-                </a>
-                <a href="#" id="img3" class="lightbox">
-                    <img src="../images/kitten(3).png">
-                </a>
-                <a href="#" id="img4" class="lightbox">
-                    <img src="../images/kitten(4).png">
-                </a>
-                <a href="#" id="img5" class="lightbox">
-                    <img src="../images/kitten(5).jpg">
-                </a>
-                <a href="#" id="img6" class="lightbox">
-                    <img src="../images/kitten(6).png">
-                </a>
-                
+            <?php }?>
         </div>
         
     </body>

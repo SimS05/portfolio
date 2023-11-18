@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $users = json_decode($jsonData, true);
 
     $flag=false;
-    foreach($users as $userdata){
+    foreach($users['users'] as $userdata){
         if($userdata["uname"]==$user->uname && $userdata["pass"]==$user->pass){
             $flag=true;
             break;
@@ -24,8 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         window.location="../pages/home.php"</script>';
     }
     else{
-        echo '<script>alert("Incorrect Username or Password");</script>';
-        exit();
+        echo '<script>alert("Incorrect Username or Password");
+        window.location="../pages/login.html"</script>';
+        
     }
 
 }
